@@ -5,13 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <header>
       <nav>
-        <a href="./index.html">Home</a>
-        <a href="./about.html">About</a>
+        <ul class="nav-links">
+          <li class="nav-link active">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="nav-link">
+            <a href="#pandas">Pandas</a>
+          </li>
+          <li class="nav-link">
+            <!-- <a href="./about.html">About</a> -->
+            <a href="./about.html">About</a>
+          </li>
+          <li class="nav-link">
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -23,7 +43,7 @@
       </section>
 
       <section class="animals">
-        <ul class="pandas">
+        <ul id="pandas" class="pandas">
           <li class="panda">
             <h3 class="panda-name">
               <a
@@ -81,6 +101,16 @@
           <!-- resizing with width is not a good idea :) -->
           <img src="./panda.avif" alt="Panda" width="300" />
         </a>
+      </section>
+
+      <section id="about" class="about">
+        <h3 class="about-title">About</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ad
+          officia sapiente fuga aut aspernatur est explicabo maiores blanditiis
+          animi quibusdam quod magnam, deserunt ratione cumque magni optio
+          incidunt hic.
+        </p>
       </section>
     </main>
 
