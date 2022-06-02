@@ -13,6 +13,13 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+
 p {
   font-size: 1.6rem;
 }
@@ -58,12 +65,11 @@ nav {
   padding: 8rem 0 8rem 2rem;
   background-color: #ddd;
 }
+
 .intro h1 {
-  font-size: 3.2rem;
   margin-bottom: 0.4rem;
 }
 .intro h2 {
-  font-size: 2.4rem;
   margin-bottom: 2rem;
 }
 
@@ -143,4 +149,63 @@ footer {
 
 .nav-link.active {
   background-color: rgb(128, 175, 238);
+}
+
+.about-items {
+  font-size: 1.8rem;
+}
+.about-items li:nth-of-type(odd) {
+  background-color: orange;
+}
+.about-items li:nth-of-type(even) {
+  background-color: yellow;
+}
+.about-items li::selection {
+  background-color: gray;
+  color: #fff;
+}
+.about-items li::first-letter {
+  font-size: 3rem;
+}
+
+.about-items li input[type="checkbox"] {
+  margin-left: 1rem;
+  transition: all 1s;
+}
+.about-items li input[type="checkbox"]:checked {
+  margin-left: 10rem;
+}
+.about-items li input[type="text"]:focus {
+  border: 0.5rem solid red;
+  outline: 0;
+  opacity: 1;
+}
+
+.circle {
+  width: 20%;
+  aspect-ratio: 1/1;
+  background-color: blue;
+  border-radius: 50%;
+  margin: 4rem;
+  position: relative;
+}
+.circle::after {
+  content: "hello, world";
+  font-size: 2rem;
+  font-family: sans-serif;
+  position: absolute;
+  right: -10rem;
+}
+
+@media screen and (min-width: 700px) {
+  .circle {
+    /* transition: all 1s; */
+    transition-property: width, border-radius, background-color;
+    transition-duration: 2.5s;
+  }
+  .circle:hover {
+    background-color: aqua;
+    border-radius: 5%;
+    width: 25%;
+  }
 }
